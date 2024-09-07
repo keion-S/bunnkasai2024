@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html long="ja"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>
+            2024文化祭軽音
+        </title>
+    </head>
+    <body>
+        <img src=https://f.yourl.jp/cb6618f4/ width="80%" height=outo><br>
+        
+        <div class="container">
+            <p class="center-text">
+                <span style="color: #ffffff;background-color: #c71585;">1Day</span><br>
+            </p>
+        </div>
+        
+        <div class="container">
+            <p class="center-text">
+            <span style="color: #ff8c00;">バンド</span><br>
+            </p>
+        </div>
+
+        <div class="container">
+            <p class="center-text">        
+           <span style="color: #ffffff;background-color: #ffd700;">2Day</span><br>
+           </p> 
+        </div>
+
+        <div class="container">
+            <p class="center-text">
+            <span style="color: #ff8c00;">バンド</span><br>
+            </p>
+        </div>        
+
+        <div class="container">
+            <p class="center-text">
+            <span style="color: #0000cd;">DTM</span><br>
+            </p>
+        </div>
+
+        <div class="container">
+            <p class="center-text">
+            <span style="color: #ffffff;background-color: #000080;">クレジット</span><br>
+            </p>
+        </div>
+
+
+        <style>
+            body{ background-color: #ffe4c4;
+            width: 100%;
+            max-width: 1280px;
+            margin: auto;}
+            .center-text {color:#000000; text-align:center;}
+            p{
+        </style>
+    </body>
+</html>
