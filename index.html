@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html long="ja"> 
+<html lang="ja"> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
         <title>
             2024文化祭軽音
         </title>
     </head>
     <body>
-        <img src=https://f.yourl.jp/cb6618f4/ width="80%" height=outo><br>
-        
+        <div class="scroll-infinity">
+            <div class="scroll-infinity__wrap">
+                <ul class="scroll-infinity__list">
+                    <li class="scroll-infinity__item"> <img src="https://github.com/user-attachments/assets/3b039495-3212-4a62-8a2c-ef26b372caec"/></li>
+                    <li class="scroll-infinity__item"><img src="https://github.com/user-attachments/assets/8fccdbd5-d833-47fa-a0c4-1d8e92f9b171"/></li>
+                    <li class="scroll-infinity__item"><img src="https://github.com/user-attachments/assets/57ecbbb0-cb14-4c41-bf22-dedb56c6564c"/></li>
+                    <li class="scroll-infinity__item"><img src="https://github.com/user-attachments/assets/d136ab22-42b3-44c4-85e9-a1385a69b5e4"/></li>
+                    <li class="scroll-infinity__item"><img src="https://github.com/user-attachments/assets/8fccdbd5-d833-47fa-a0c4-1d8e92f9b171"/></li>
+                    <li class="scroll-infinity__item"><img src="https://github.com/user-attachments/assets/3b039495-3212-4a62-8a2c-ef26b372caec"/></li>     
+                    <!--流れる画像の追加-->
+                </ul>                    
+            </div>
+        </div>
         <div class="container">
             <p class="center-text">
                 <span style="color: #ffffff;background-color: #c71585;">1Day</span><br>
@@ -19,6 +31,9 @@
         <div class="container">
             <p class="center-text">
             <span style="color: #ff8c00;">バンド</span><br>
+            </p>
+            <p>
+                画像を一覧表示
             </p>
         </div>
 
@@ -43,7 +58,48 @@
         <div class="container">
             <p class="center-text">
             <span style="color: #ffffff;background-color: #000080;">クレジット</span><br>
-            </p>
+                <br>
+                部長<br>
+                3F 吉村　七夏<br>
+                <br>
+                副部長<br>
+                3D 髙橋　莉矢<br>
+                3F 杉森陽菜乃<br>
+                <br>
+                CM制作者<br>
+                3F 杉森陽菜乃<br>
+                3F 吉村　七夏<br>
+                <br>
+                Webサイト制作者<br>
+                3F 杉森陽菜乃<br>
+                <br>
+                撮影協力<br>
+                1A 遠藤　晴太<br>
+                1A 北川　柚子<br>
+                1A 佐藤　律綺<br>
+                1A 濱口　　楓<br>
+                1C 加藤菜々美<br>
+                1C 洲鎌里空丸<br>
+                1D 山磨　乃歌<br>
+                1E 小林　蒼衣<br>
+                1E 古市真里奈<br>
+                1E 山中　瑛美<br>
+                1F 池田　士純<br>
+                1F 杉尾　音佳<br>
+                1F 御代田　悠<br>
+                2C 熊谷　　文<br>
+                2C 谷本　智悠<br>
+                2D 米山　郁橙<br>
+                2F 安里　來桃<br>
+                2F 市岡　伶那<br>
+                2F 野本　紫乃<br>
+                2F 前田　佳乃<br>                
+                2F 山口亜杏奈<br>         
+                3D 髙橋　莉矢<br>
+                3F 岡部　紗英<br>
+                3F 杉森陽菜乃<br>
+                3F 吉村　七夏<br>
+           </p>
         </div>
 
 
@@ -53,7 +109,68 @@
             max-width: 1280px;
             margin: auto;}
             .center-text {color:#000000; text-align:center;}
-            p{
+            p{font-family: "Dela Gothic One", sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              font-size: 40px;
+             }
+            @keyframes infinity-scroll-right{
+                from{
+                    transform: translateX(-100%);
+                    }
+                to{
+                    transform: translateX(100%);
+                    }
+                }
+            .scroll-infinity {
+    overflow: hidden; /* はみ出た部分を隠す */
+    white-space: nowrap; /* 横に並べるため */
+}
+
+.scroll-infinity__wrap {
+    display: flex; /* 横に並べる */
+}
+
+.scroll-infinity__list {
+    display: flex; /* 横に並べる */
+    animation: infinity-scroll-right 80s infinite linear;
+}
+
+.scroll-infinity__item {
+    display: inline-block; /* 横に並べる */
+}
+
+.scroll-infinity__item img {
+    width: 500px; /* 画像の幅を指定 */
+    height: 500px; /* 高さは自動調整 */
+
+}
+
         </style>
+        <script>
+        // JavaScriptで画像リストを無限に繰り返す
+        window.addEventListener('DOMContentLoaded', () => {
+            const list = document.querySelector('.scroll-infinity__list');
+            const listItems = list.innerHTML; // 現在のリストのHTMLを取得
+
+            // リストを複製して2回表示する
+            list.innerHTML += listItems; 
+
+            // アニメーションを設定
+            const scrollWrapper = document.querySelector('.scroll-infinity__wrap');
+            let scrollSpeed = 1; // スクロール速度
+
+            function scrollImages() {
+                scrollWrapper.scrollLeft += scrollSpeed;
+                // スクロールがリストの終わりまで来たら最初に戻す
+                if (scrollWrapper.scrollLeft >= list.scrollWidth / 2) {
+                    scrollWrapper.scrollLeft = 0;
+                }
+                requestAnimationFrame(scrollImages);
+            }
+
+            scrollImages(); // アニメーションを開始
+        });
+    </script>
     </body>
 </html>
